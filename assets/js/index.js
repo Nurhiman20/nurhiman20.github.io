@@ -6,9 +6,11 @@ var app = new Vue({
       name: 'Angga Nurhiman',
       drawer: true,
       items: [
-        { title: 'Home', icon: 'mdi-home-city' },
-        { title: 'My Account', icon: 'mdi-account' },
-        { title: 'Users', icon: 'mdi-account-group-outline' },
+        { title: 'Home', icon: 'mdi-home-outline' },
+        { title: 'About me', icon: 'mdi-account-circle-outline' },
+        { title: 'Skills', icon: 'mdi-cog-outline' },
+        { title: 'My Work', icon: 'mdi-eye-outline' },
+        { title: 'Contact', icon: 'mdi-email-outline' }
       ],
       mini: true
     }
