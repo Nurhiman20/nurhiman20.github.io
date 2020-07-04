@@ -4,6 +4,10 @@
   font-weight: bold;
 }
 
+.text-blue {
+  color: #578CE0;
+}
+
 .text-grey {
   color: #8D8D8D;
 }
@@ -18,6 +22,10 @@
 
 .h-100 {
   height: 100vh;
+}
+
+.line-height-small {
+  line-height: 35px;
 }
 
 #home {
