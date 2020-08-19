@@ -12,6 +12,10 @@
   color: #8D8D8D;
 }
 
+.skill-text {
+  line-height: 35px;
+}
+
 .bco-test {
   background-color: greenyellow;
 }
