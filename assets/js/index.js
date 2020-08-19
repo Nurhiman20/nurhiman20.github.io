@@ -12,7 +12,59 @@ var app = new Vue({
         { title: 'My Work', icon: 'mdi-eye-outline' },
         { title: 'Contact', icon: 'mdi-email-outline' }
       ],
-      mini: true
+      mini: true,
+      mostUsedSkills: [
+        {
+          src: './assets/img/vue.svg',
+          text: 'Vue.js'
+        },
+        {
+          src: './assets/img/vuetify.svg',
+          text: 'Vuetify'
+        },
+        {
+          src: './assets/img/vuesax.png',
+          text: 'Vuesax'
+        },
+        {
+          src: './assets/img/bootstrap.svg',
+          text: 'Bootstrap'
+        },
+        {
+          src: './assets/img/html.svg',
+          text: 'HTML'
+        },
+        {
+          src: './assets/img/css.svg',
+          text: 'CSS'
+        },
+        {
+          src: './assets/img/javascript.svg',
+          text: 'Javascript'
+        },
+        {
+          src: './assets/img/sass.svg',
+          text: 'Sass (Scss)'
+        }
+      ],
+      knowBasics: [
+        {
+          src: './assets/img/nuxt.png',
+          text: 'NuxtJs'
+        },
+        {
+          src: './assets/img/nodejs.svg',
+          text: 'Node.js'
+        },
+        {
+          src: './assets/img/typescript.svg',
+          text: 'TypeScript'
+        },
+        {
+          src: './assets/img/firebase.svg',
+          text: 'Firebase'
+        }
+      ]
     }
   },
 })

@@ -84,12 +84,12 @@
             </v-row>
           </section>
 
-          <section id="about-me">
+          <section id="about-me" class="d-flex h-100">
             <v-row>
               <v-col cols="12" md="6" lg="6" class="py-0 vertical-center">
-                <div class="d-flex">
+                <div class="d-flex pa-4">
                   <div class="mx-auto mb-6">
-                    <v-avatar size="35vh">
+                    <v-avatar size="30vh">
                       <img
                         src="./assets/img/foto.jpg"
                         alt="Angga Nurhiman"
@@ -105,13 +105,68 @@
                       <p class="text-large text-blue">About Me</p>
                     </div>
                     <div>
-                      <p class="line-height-small">My name is Angga Nurhiman. I'm a front-end web developer living in Bandung Indonesia. I'm interested in website development, graphic design, and Internet of Things. As a front-end web developer, I have experience using Vue.js. I like it when I can overcome problems with that technology, and also I am interested in learning new things.</p>
+                      <p class="line-height-small">My name is Angga Nurhiman. I'm a front-end web developer living in Bandung Indonesia. As a front-end web developer, I have experience using Vue.js. I like it when I can overcome problems with that technology, and also I am interested in learning new things.</p>
                       <p class="line-height-small">Besides working on the code, I also like to play soccer or futsal. This activity keeps my body fit and makes my mind more relaxed.</p>
                     </div>
                   </div>              
                 </div>
               </v-col>
             </v-row>
+          </section>
+
+          <section id="skills" class="d-flex h-100">
+            <div class="vertical-center w-full">
+              <p class="text-large text-blue">My Skills</p>
+              <v-row>
+                <v-col cols="12" md="7" lg="7" class="py-0 px-4">
+                  <div class="d-flex flex-column">
+                    <div class="mx-auto">
+                      <h1>Most Used Tools</h1>
+                    </div>
+                    <div class="d-flex flex-row py-3">
+                      <v-row>
+                        <v-col cols="3" md="3" lg="3" class="py-0" v-for="(mostUsed, index) in mostUsedSkills" :key="index">
+                          <div class="d-flex flex-column">
+                            <v-avatar tile color="white" size="10vw" class="mx-auto">
+                              <img
+                                :src="mostUsed.src"
+                                :alt="mostUsed.text"
+                                style="max-height: 70%; max-width: 70%"
+                              >
+                            </v-avatar>
+                            <p class="mx-auto">{{ mostUsed.text }}</p>
+                          </div>
+                        </v-col>
+                      </v-row>
+                    </div>
+                  </div>
+                </v-col>
+                <v-col cols="12" md="4" lg="1" class="py-0"></v-col>
+                <v-col cols="12" md="4" lg="4" class="py-0">
+                  <div class="d-flex flex-column">
+                    <div class="mx-auto">
+                      <h1>Know The Basics</h1>
+                    </div>
+                    <div class="d-flex flex-row py-3">
+                      <v-row>
+                        <v-col cols="3" md="6" lg="6" class="py-0" v-for="(knowBasic, index) in knowBasics" :key="index">
+                          <div class="d-flex flex-column">
+                            <v-avatar tile color="white" size="10vw" class="mx-auto">
+                              <img
+                                :src="knowBasic.src"
+                                :alt="knowBasic.text"
+                                style="max-height: 70%; max-width: 70%"
+                              >
+                            </v-avatar>
+                            <p class="mx-auto">{{ knowBasic.text }}</p>
+                          </div>
+                        </v-col>
+                      </v-row>
+                    </div>
+                  </div>
+                </v-col>
+              </v-row>
+            </div>
           </section>
         </v-container>
       </v-main>
