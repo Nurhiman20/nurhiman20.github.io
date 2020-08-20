@@ -6,11 +6,11 @@ var app = new Vue({
       name: 'Angga Nurhiman',
       drawer: true,
       items: [
-        { title: 'Home', icon: 'mdi-home-outline' },
-        { title: 'About me', icon: 'mdi-account-circle-outline' },
-        { title: 'Skills', icon: 'mdi-cog-outline' },
-        { title: 'My Work', icon: 'mdi-eye-outline' },
-        { title: 'Contact', icon: 'mdi-email-outline' }
+        { title: 'Home', icon: 'mdi-home-outline', to: '#home' },
+        { title: 'About me', icon: 'mdi-account-circle-outline', to: '#about-me' },
+        { title: 'Skills', icon: 'mdi-cog-outline', to: '#skills' },
+        { title: 'My Work', icon: 'mdi-eye-outline', to: '#work' },
+        { title: 'Contact', icon: 'mdi-email-outline', to: '#contact' }
       ],
       mini: true,
       mostUsedSkills: [
@@ -64,7 +64,17 @@ var app = new Vue({
           src: './assets/img/firebase.svg',
           text: 'Firebase'
         }
-      ]
+      ],
+      selectorTarget: null
     }
   },
+  computed: {
+    options () {
+      return {
+        duration: 750,
+        offset: 0,
+        easing: 'easeInOutQuad',
+      }
+    }
+  }
 })
