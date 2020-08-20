@@ -3,6 +3,7 @@ var app = new Vue({
   vuetify: new Vuetify(),
   data() {
     return {
+      overlay: false,
       name: 'Angga Nurhiman',
       drawer: true,
       items: [
@@ -75,6 +76,16 @@ var app = new Vue({
         offset: 0,
         easing: 'easeInOutQuad',
       }
+    }
+  },
+  created() {
+    this.overlay = true
+  },
+  watch: {
+    overlay (val) {
+      val && setTimeout(() => {
+        this.overlay = false
+      }, 2000)
     }
   }
 })

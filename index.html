@@ -14,7 +14,7 @@
 </head>
 <body>
   <div id="app">
-    <v-app>
+    <v-app>      
       <v-navigation-drawer
         v-model="drawer"
         :mini-variant.sync="mini"
@@ -23,6 +23,7 @@
         app
         permanent
         expand-on-hover
+        v-if="overlay === false"
       >
         <v-list-item class="px-2" style="background-color: #070707;">
           <v-list-item-avatar size="40">
@@ -218,6 +219,10 @@
           </section>
         </v-container>
       </v-main>
+
+      <v-overlay :value="overlay" opacity="0.8">
+        <v-progress-circular indeterminate size="64" color="#578CE0"></v-progress-circular>
+      </v-overlay>
     </v-app>
   </div>
 
