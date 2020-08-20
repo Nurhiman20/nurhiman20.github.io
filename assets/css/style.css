@@ -12,6 +12,11 @@
   color: #8D8D8D;
 }
 
+#contact a {
+  text-decoration: none;
+  color: white;
+}
+
 .skill-text {
   line-height: 35px;
 }
