@@ -66,7 +66,10 @@ var app = new Vue({
           text: 'Firebase'
         }
       ],
-      selectorTarget: null
+      selectorTarget: null,
+      stacks1: ['Frontend', 'Vue.js', 'Vuetify', 'Vue Router', 'Vuex', 'HTML', 'SASS (SCSS)', 'Axios', 'API Integration'],
+      stacks2: ['Frontend', 'Vue.js', 'Vuesax', 'Vue Router', 'Vuex', 'HTML', 'SASS (SCSS)', 'Axios', 'API Integration'],
+      stacks3: ['Frontend', 'Bootstrap', 'HTML', 'SASS (SCSS)']
     }
   },
   computed: {

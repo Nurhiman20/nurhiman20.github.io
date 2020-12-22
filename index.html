@@ -173,12 +173,112 @@
 
           <section id="work" class="d-flex flex-column h-100 py-12">
             <p class="text-large text-blue mb-4">What I've done</p>
-            <div class="d-flex flex-column justify-center mt-12">
-              <div class="d-flex flex-row justify-center">
-                <v-icon color="#8D8D8D" size="90">mdi-hammer-wrench</v-icon>
-                <v-icon color="#8D8D8D" size="120">mdi-account-hard-hat</v-icon>
-              </div>
-              <p class="mx-auto text-center">I'm sorry. This section is under construction.</p>
+            <div class="d-flex flex-column justify-center">
+              <v-carousel
+                cycle
+                hide-delimiter-background
+                :show-arrows="false"
+              >
+                <v-carousel-item>
+                  <v-sheet
+                    color="#1D1D1D"
+                    height="100%"
+                  >
+                    <v-row>
+                      <v-col cols="12" md="8" lg="8" class="px-12">
+                        <div class="fill-height d-flex">
+                          <v-img
+                            :aspect-ratio="1366/625"
+                            width="60"
+                            src="./assets/img/Eatmore2.png"
+                          ></v-img>
+                        </div>
+                      </v-col>
+                      <v-col cols="12" md="4" lg="4" class="py-0 px-4">
+                        <h1>Eatmore ERP</h1>
+                        <p class="line-height-small">This website is used to manage and integrate operational activities in a restaurant that is already an Eatmore merchant.</p>
+                      </v-col>
+                      <v-col cols="12" md="12" lg="12" class="py-0 px-4" align="center">
+                        <v-chip
+                          class="mx-2"
+                          color="#578CE0"
+                          outlined
+                          label
+                          v-for="(stack, i) in stacks1" :key="i"
+                        >
+                          {{ stack }}
+                        </v-chip>
+                      </v-col>
+                    </v-row>
+                  </v-sheet>
+                </v-carousel-item>
+                <v-carousel-item>
+                  <v-sheet
+                    color="#1D1D1D"
+                    height="100%"
+                  >
+                    <v-row>
+                      <v-col cols="12" md="4" lg="4" class="py-0 px-4">
+                        <h1>MyTreats</h1>
+                        <p class="line-height-small">E-voucher and attractive offers marketplace that are connected with various merchants in Malaysia.</p>
+                      </v-col>
+                      <v-col cols="12" md="8" lg="8" class="px-12">
+                        <div class="fill-height d-flex">
+                          <v-img
+                            :aspect-ratio="1366/625"
+                            width="60"
+                            src="./assets/img/MyTreats2.png"
+                          ></v-img>
+                        </div>
+                      </v-col>
+                      <v-col cols="12" md="12" lg="12" class="py-0 px-4" align="center">
+                        <v-chip
+                          class="mx-2"
+                          color="#578CE0"
+                          outlined
+                          label
+                          v-for="(stack, i) in stacks2" :key="i"
+                        >
+                          {{ stack }}
+                        </v-chip>
+                      </v-col>
+                    </v-row>
+                  </v-sheet>
+                </v-carousel-item>
+                <v-carousel-item>
+                  <v-sheet
+                    color="#1D1D1D"
+                    height="100%"
+                  >
+                    <v-row>
+                      <v-col cols="12" md="8" lg="8" class="px-12">
+                        <div class="fill-height d-flex">
+                          <v-img
+                            :aspect-ratio="1366/625"
+                            width="60"
+                            src="./assets/img/Tready.png"
+                          ></v-img>
+                        </div>
+                      </v-col>
+                      <v-col cols="12" md="4" lg="4" class="py-0 px-4">
+                        <h1>Tready</h1>
+                        <p class="line-height-small">Landing page for trading app.</p>
+                      </v-col>
+                      <v-col cols="12" md="12" lg="12" class="py-0 px-4" align="center">
+                        <v-chip
+                          class="mx-2"
+                          color="#578CE0"
+                          outlined
+                          label
+                          v-for="(stack, i) in stacks3" :key="i"
+                        >
+                          {{ stack }}
+                        </v-chip>
+                      </v-col>
+                    </v-row>
+                  </v-sheet>
+                </v-carousel-item>
+              </v-carousel>
             </div>
           </section>
 
