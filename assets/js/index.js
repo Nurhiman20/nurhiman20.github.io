@@ -80,6 +80,8 @@ var app = new Vue({
                 }
             ],
             selectorTarget: null,
+            stacks0: ['Frontend', 'Vue.js', 'NuxtJs', 'Vuetify', 'Vue Router', 'Vuex', 'HTML', 'SASS (SCSS)', 'Axios', 'API Integration'],
+            stacksMakasi: ['Frontend', 'Vue.js', 'Bootstrap', 'Vue Router', 'Pinia', 'HTML', 'SASS (SCSS)', 'Axios', 'API Integration'],
             stacks1: ['Frontend', 'Vue.js', 'Vuetify', 'Vue Router', 'Vuex', 'HTML', 'SASS (SCSS)', 'Axios', 'API Integration'],
             stacks2: ['Frontend', 'Vue.js', 'Vuesax', 'Vue Router', 'Vuex', 'HTML', 'SASS (SCSS)', 'Axios', 'API Integration'],
             stacks3: ['Frontend', 'Bootstrap', 'HTML', 'SASS (SCSS)']
