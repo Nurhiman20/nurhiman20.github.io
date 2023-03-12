@@ -1,334 +1,264 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="icon" type="image/png" href="./assets/img/Logo.png"/>
-  <link href="https://fonts.googleapis.com/css?family=Montserrat:100,300,400,500,700,900" rel="stylesheet">
-  <link href="https://cdn.jsdelivr.net/npm/@mdi/font@5.x/css/materialdesignicons.min.css" rel="stylesheet">
-  <link href="https://cdn.jsdelivr.net/npm/vuetify@2.3.3/dist/vuetify.min.css" rel="stylesheet">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/png" href="./assets/img/Logo.png" />
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:100,300,400,500,700,900" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/@mdi/font@5.x/css/materialdesignicons.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/vuetify@2.3.3/dist/vuetify.min.css" rel="stylesheet">
 
-  <link rel="stylesheet" href="./assets/css/style.css">
+    <link rel="stylesheet" href="./assets/css/style.css">
 
-  <title>Angga Nurhiman - Portfolio</title>
+    <title>Angga Nurhiman - Portfolio</title>
 </head>
+
 <body>
-  <div id="app">
-    <v-app>      
-      <v-navigation-drawer
-        v-model="drawer"
-        :mini-variant.sync="mini"
-        color="#181818"
-        dark
-        app
-        permanent
-        expand-on-hover
-        v-if="overlay === false"
-      >
-        <v-list-item class="px-2" style="background-color: #070707;">
-          <v-list-item-avatar size="40">
-            <v-img src="./assets/img/Ava.png"></v-img>
-          </v-list-item-avatar>
-  
-          <v-list-item-title>Angga Nurhiman</v-list-item-title>
-        </v-list-item>
-  
-        <!-- <v-divider></v-divider> -->
-  
-        <v-list dense class="">
-          <v-list-item
-            v-for="item in items"
-            :key="item.title"
-            class="mt-6"
-            link
-            @click="$vuetify.goTo(item.to, options)"
-          >
-            <v-list-item-icon>
-              <v-icon color="#8D8D8D">{{ item.icon }}</v-icon>
-            </v-list-item-icon>
-  
-            <v-list-item-content>
-              <v-list-item-title>{{ item.title }}</v-list-item-title>
-            </v-list-item-content>
-          </v-list-item>
-        </v-list>
-      </v-navigation-drawer>
+    <div id="app">
+        <v-app>
+            <v-navigation-drawer v-model="drawer" :mini-variant.sync="mini" color="#181818" dark app permanent expand-on-hover v-if="overlay === false">
+                <v-list-item class="px-2" style="background-color: #070707;">
+                    <v-list-item-avatar size="40">
+                        <v-img src="./assets/img/Ava.png"></v-img>
+                    </v-list-item-avatar>
 
-      <v-main>
-        <v-container>
-          <section id="home">
-            <v-row>
-              <v-col cols="12" md="6" lg="6" class="py-0">
-                <div class="d-flex h-100">
-                  <div class="vertical-center">
-                    <div class="border-bottom-title">
-                      <p class="text-large">Hello,</p>
-                      <p class="text-large">I'm Angga</p>
-                    </div>
-                    <div>
-                      <p class="text-grey">Front-end Web Developer</p>
-                      <v-btn
-                        outlined
-                        large
-                        color="#578CE0"
-                        @click="$vuetify.goTo('#contact', options)"
-                      >Contact Me</v-btn>
-                    </div>
-                  </div>              
-                </div>
-              </v-col>
-              <v-col cols="12" md="6" lg="6" class="py-0 hidden-sm-and-down">
-                <div class="d-flex h-100">
-                  <div class="vertical-center mx-auto">
-                    <img src="./assets/img/Logo.png" alt="Logo">
-                  </div>
-                </div>
-              </v-col>
-            </v-row>
-          </section>
+                    <v-list-item-title>Angga Nurhiman</v-list-item-title>
+                </v-list-item>
 
-          <section id="about-me" class="d-flex h-100">
-            <v-row>
-              <v-col cols="12" md="6" lg="6" class="py-0 vertical-center">
-                <div class="d-flex pa-4">
-                  <div class="mx-auto mb-6">
-                    <v-avatar size="30vh">
-                      <img
-                        src="./assets/img/foto.jpg"
-                        alt="Angga Nurhiman"
-                      >
-                    </v-avatar>
-                  </div>
-                </div>
-              </v-col>
-              <v-col cols="12" md="6" lg="6" class="py-0 vertical-center">
-                <div class="d-flex">
-                  <div class="">
-                    <div>
-                      <p class="text-large text-blue">About Me</p>
-                    </div>
-                    <div>
-                      <p class="line-height-small">My name is Angga Nurhiman. I'm a front-end web developer living in Bandung, Indonesia. As a front-end web developer, I have experience using Vue.js. I like it when I can overcome problems with that technology, and also I'm interested in learning new things.</p>
-                      <p class="line-height-small">Besides working on the code, I also like to play soccer or futsal. This activity keeps my body fit and makes my mind more relaxed.</p>
-                    </div>
-                  </div>              
-                </div>
-              </v-col>
-            </v-row>
-          </section>
+                <!-- <v-divider></v-divider> -->
 
-          <section id="skills" class="d-flex h-100">
-            <div class="vertical-center w-full">
-              <p class="text-large text-blue">My Skills</p>
-              <v-row>
-                <v-col cols="12" md="7" lg="7" class="py-0 px-4">
-                  <div class="d-flex flex-column">
-                    <div class="mx-auto">
-                      <h1>Most Used Tools</h1>
-                    </div>
-                    <div class="d-flex flex-row py-3">
-                      <v-row>
-                        <v-col cols="3" md="3" lg="3" class="py-0" v-for="(mostUsed, index) in mostUsedSkills" :key="index">
-                          <div class="d-flex flex-column">
-                            <v-avatar tile color="white" size="10vw" class="mx-auto">
-                              <img
-                                :src="mostUsed.src"
-                                :alt="mostUsed.text"
-                                style="max-height: 70%; max-width: 70%"
-                              >
-                            </v-avatar>
-                            <p class="mx-auto skill-text">{{ mostUsed.text }}</p>
-                          </div>
-                        </v-col>
-                      </v-row>
-                    </div>
-                  </div>
-                </v-col>
-                <v-col cols="12" md="4" lg="1" class="py-0"></v-col>
-                <v-col cols="12" md="4" lg="4" class="py-0">
-                  <div class="d-flex flex-column">
-                    <div class="mx-auto">
-                      <h1>Know The Basics</h1>
-                    </div>
-                    <div class="d-flex flex-row py-3">
-                      <v-row>
-                        <v-col cols="3" md="6" lg="6" class="py-0" v-for="(knowBasic, index) in knowBasics" :key="index">
-                          <div class="d-flex flex-column">
-                            <v-avatar tile color="white" size="10vw" class="mx-auto">
-                              <img
-                                :src="knowBasic.src"
-                                :alt="knowBasic.text"
-                                style="max-height: 70%; max-width: 70%"
-                              >
-                            </v-avatar>
-                            <p class="mx-auto skill-text">{{ knowBasic.text }}</p>
-                          </div>
-                        </v-col>
-                      </v-row>
-                    </div>
-                  </div>
-                </v-col>
-              </v-row>
-            </div>
-          </section>
+                <v-list dense class="">
+                    <v-list-item v-for="item in items" :key="item.title" class="mt-6" link @click="$vuetify.goTo(item.to, options)">
+                        <v-list-item-icon>
+                            <v-icon color="#8D8D8D">{{ item.icon }}</v-icon>
+                        </v-list-item-icon>
 
-          <section id="work" class="d-flex flex-column h-100 py-12">
-            <p class="text-large text-blue mb-4">What I've done</p>
-            <div class="d-flex flex-column justify-center">
-              <v-carousel
-                cycle
-                hide-delimiter-background
-                :show-arrows="false"
-              >
-                <v-carousel-item>
-                  <v-sheet
-                    color="#1D1D1D"
-                    height="100%"
-                  >
-                    <v-row>
-                      <v-col cols="12" md="8" lg="8" class="px-12">
-                        <div class="fill-height d-flex">
-                          <v-img
-                            :aspect-ratio="1366/625"
-                            width="60"
-                            src="./assets/img/Eatmore2.png"
-                          ></v-img>
+                        <v-list-item-content>
+                            <v-list-item-title>{{ item.title }}</v-list-item-title>
+                        </v-list-item-content>
+                    </v-list-item>
+                </v-list>
+            </v-navigation-drawer>
+
+            <v-main>
+                <v-container>
+                    <section id="home">
+                        <v-row>
+                            <v-col cols="12" md="6" lg="6" class="py-0">
+                                <div class="d-flex h-100">
+                                    <div class="vertical-center">
+                                        <div class="border-bottom-title">
+                                            <p class="text-large">Hello,</p>
+                                            <p class="text-large">I'm Angga</p>
+                                        </div>
+                                        <div>
+                                            <p class="text-grey">Front-end Web Developer</p>
+                                            <v-btn outlined large color="#578CE0" @click="$vuetify.goTo('#contact', options)">Contact Me</v-btn>
+                                        </div>
+                                    </div>
+                                </div>
+                            </v-col>
+                            <v-col cols="12" md="6" lg="6" class="py-0 hidden-sm-and-down">
+                                <div class="d-flex h-100">
+                                    <div class="vertical-center mx-auto">
+                                        <img src="./assets/img/Logo.png" alt="Logo">
+                                    </div>
+                                </div>
+                            </v-col>
+                        </v-row>
+                    </section>
+
+                    <section id="about-me" class="d-flex h-100">
+                        <v-row>
+                            <v-col cols="12" md="6" lg="6" class="py-0 vertical-center">
+                                <div class="d-flex pa-4">
+                                    <div class="mx-auto mb-6">
+                                        <v-avatar size="30vh">
+                                            <img src="./assets/img/foto.jpg" alt="Angga Nurhiman">
+                                        </v-avatar>
+                                    </div>
+                                </div>
+                            </v-col>
+                            <v-col cols="12" md="6" lg="6" class="py-0 vertical-center">
+                                <div class="d-flex">
+                                    <div class="">
+                                        <div>
+                                            <p class="text-large text-blue">About Me</p>
+                                        </div>
+                                        <div>
+                                            <p class="line-height-small">My name is Angga Nurhiman. I'm a front-end web developer living in Bandung, Indonesia. As a front-end web developer, I have experience using Vue.js. I like it when I can overcome problems with that technology,
+                                                and also I'm interested in learning new things.</p>
+                                            <p class="line-height-small">Besides working on the code, I also like to play soccer or futsal. This activity keeps my body fit and makes my mind more relaxed.</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </v-col>
+                        </v-row>
+                    </section>
+
+                    <section id="skills" class="d-flex h-100">
+                        <div class="vertical-center w-full">
+                            <p class="text-large text-blue">My Skills</p>
+                            <v-row>
+                                <v-col cols="12" md="7" lg="7" class="py-0 px-4">
+                                    <div class="d-flex flex-column">
+                                        <div class="mx-auto">
+                                            <h1>Most Used Tools</h1>
+                                        </div>
+                                        <div class="d-flex flex-row py-3">
+                                            <v-row>
+                                                <v-col cols="3" md="3" lg="3" class="py-0" v-for="(mostUsed, index) in mostUsedSkills" :key="index">
+                                                    <div class="d-flex flex-column">
+                                                        <v-avatar tile color="white" size="10vw" class="mx-auto">
+                                                            <img :src="mostUsed.src" :alt="mostUsed.text" style="max-height: 70%; max-width: 80%;">
+                                                        </v-avatar>
+                                                        <p class="mx-auto skill-text">{{ mostUsed.text }}</p>
+                                                    </div>
+                                                </v-col>
+                                            </v-row>
+                                        </div>
+                                    </div>
+                                </v-col>
+                                <v-col cols="12" md="4" lg="1" class="py-0"></v-col>
+                                <v-col cols="12" md="4" lg="4" class="py-0">
+                                    <div class="d-flex flex-column">
+                                        <div class="mx-auto">
+                                            <h1>Know The Basics</h1>
+                                        </div>
+                                        <div class="d-flex flex-row py-3">
+                                            <v-row>
+                                                <v-col cols="3" md="6" lg="6" class="py-0" v-for="(knowBasic, index) in knowBasics" :key="index">
+                                                    <div class="d-flex flex-column">
+                                                        <v-avatar tile color="white" size="10vw" class="mx-auto">
+                                                            <img :src="knowBasic.src" :alt="knowBasic.text" style="max-height: 70%; max-width: 70%">
+                                                        </v-avatar>
+                                                        <p class="mx-auto skill-text">{{ knowBasic.text }}</p>
+                                                    </div>
+                                                </v-col>
+                                            </v-row>
+                                        </div>
+                                    </div>
+                                </v-col>
+                            </v-row>
                         </div>
-                      </v-col>
-                      <v-col cols="12" md="4" lg="4" class="py-0 px-4">
-                        <h1>Eatmore ERP</h1>
-                        <p class="line-height-small">This website is used to manage and integrate operational activities in a restaurant that is already an Eatmore merchant.</p>
-                      </v-col>
-                      <v-col cols="12" md="12" lg="12" class="py-0 px-4" align="center">
-                        <v-chip
-                          class="mx-2"
-                          color="#578CE0"
-                          outlined
-                          label
-                          v-for="(stack, i) in stacks1" :key="i"
-                        >
-                          {{ stack }}
-                        </v-chip>
-                      </v-col>
-                    </v-row>
-                  </v-sheet>
-                </v-carousel-item>
-                <v-carousel-item>
-                  <v-sheet
-                    color="#1D1D1D"
-                    height="100%"
-                  >
-                    <v-row>
-                      <v-col cols="12" md="4" lg="4" class="py-0 px-4">
-                        <h1>MyTreats</h1>
-                        <p class="line-height-small">E-voucher and attractive offers marketplace that are connected with various merchants in Malaysia.</p>
-                      </v-col>
-                      <v-col cols="12" md="8" lg="8" class="px-12">
-                        <div class="fill-height d-flex">
-                          <v-img
-                            :aspect-ratio="1366/625"
-                            width="60"
-                            src="./assets/img/MyTreats2.png"
-                          ></v-img>
+                    </section>
+
+                    <section id="work" class="d-flex flex-column h-100 py-12">
+                        <p class="text-large text-blue mb-4">What I've done</p>
+                        <div class="d-flex flex-column justify-center">
+                            <v-carousel cycle hide-delimiter-background :show-arrows="false">
+                                <v-carousel-item>
+                                    <v-sheet color="#1D1D1D" height="100%">
+                                        <v-row>
+                                            <v-col cols="12" md="8" lg="8" class="px-12">
+                                                <div class="fill-height d-flex">
+                                                    <v-img :aspect-ratio="1366/625" width="60" src="./assets/img/Eatmore2.png"></v-img>
+                                                </div>
+                                            </v-col>
+                                            <v-col cols="12" md="4" lg="4" class="py-0 px-4">
+                                                <h1>Eatmore ERP</h1>
+                                                <p class="line-height-small">This website is used to manage and integrate operational activities in a restaurant that is already an Eatmore merchant.</p>
+                                            </v-col>
+                                            <v-col cols="12" md="12" lg="12" class="py-0 px-4" align="center">
+                                                <v-chip class="mx-2" color="#578CE0" outlined label v-for="(stack, i) in stacks1" :key="i">
+                                                    {{ stack }}
+                                                </v-chip>
+                                            </v-col>
+                                        </v-row>
+                                    </v-sheet>
+                                </v-carousel-item>
+                                <v-carousel-item>
+                                    <v-sheet color="#1D1D1D" height="100%">
+                                        <v-row>
+                                            <v-col cols="12" md="4" lg="4" class="py-0 px-4">
+                                                <h1>MyTreats</h1>
+                                                <p class="line-height-small">E-voucher and attractive offers marketplace that are connected with various merchants in Malaysia.</p>
+                                            </v-col>
+                                            <v-col cols="12" md="8" lg="8" class="px-12">
+                                                <div class="fill-height d-flex">
+                                                    <v-img :aspect-ratio="1366/625" width="60" src="./assets/img/MyTreats2.png"></v-img>
+                                                </div>
+                                            </v-col>
+                                            <v-col cols="12" md="12" lg="12" class="py-0 px-4" align="center">
+                                                <v-chip class="mx-2" color="#578CE0" outlined label v-for="(stack, i) in stacks2" :key="i">
+                                                    {{ stack }}
+                                                </v-chip>
+                                            </v-col>
+                                        </v-row>
+                                    </v-sheet>
+                                </v-carousel-item>
+                                <v-carousel-item>
+                                    <v-sheet color="#1D1D1D" height="100%">
+                                        <v-row>
+                                            <v-col cols="12" md="8" lg="8" class="px-12">
+                                                <div class="fill-height d-flex">
+                                                    <v-img :aspect-ratio="1366/625" width="60" src="./assets/img/Tready.png"></v-img>
+                                                </div>
+                                            </v-col>
+                                            <v-col cols="12" md="4" lg="4" class="py-0 px-4">
+                                                <h1>Tready</h1>
+                                                <p class="line-height-small">Landing page for trading app.</p>
+                                            </v-col>
+                                            <v-col cols="12" md="12" lg="12" class="py-0 px-4" align="center">
+                                                <v-chip class="mx-2" color="#578CE0" outlined label v-for="(stack, i) in stacks3" :key="i">
+                                                    {{ stack }}
+                                                </v-chip>
+                                            </v-col>
+                                        </v-row>
+                                    </v-sheet>
+                                </v-carousel-item>
+                            </v-carousel>
                         </div>
-                      </v-col>
-                      <v-col cols="12" md="12" lg="12" class="py-0 px-4" align="center">
-                        <v-chip
-                          class="mx-2"
-                          color="#578CE0"
-                          outlined
-                          label
-                          v-for="(stack, i) in stacks2" :key="i"
-                        >
-                          {{ stack }}
-                        </v-chip>
-                      </v-col>
-                    </v-row>
-                  </v-sheet>
-                </v-carousel-item>
-                <v-carousel-item>
-                  <v-sheet
-                    color="#1D1D1D"
-                    height="100%"
-                  >
-                    <v-row>
-                      <v-col cols="12" md="8" lg="8" class="px-12">
-                        <div class="fill-height d-flex">
-                          <v-img
-                            :aspect-ratio="1366/625"
-                            width="60"
-                            src="./assets/img/Tready.png"
-                          ></v-img>
-                        </div>
-                      </v-col>
-                      <v-col cols="12" md="4" lg="4" class="py-0 px-4">
-                        <h1>Tready</h1>
-                        <p class="line-height-small">Landing page for trading app.</p>
-                      </v-col>
-                      <v-col cols="12" md="12" lg="12" class="py-0 px-4" align="center">
-                        <v-chip
-                          class="mx-2"
-                          color="#578CE0"
-                          outlined
-                          label
-                          v-for="(stack, i) in stacks3" :key="i"
-                        >
-                          {{ stack }}
-                        </v-chip>
-                      </v-col>
-                    </v-row>
-                  </v-sheet>
-                </v-carousel-item>
-              </v-carousel>
-            </div>
-          </section>
+                    </section>
 
-          <section id="contact" class="d-flex flex-column h-100 py-12">
-            <p class="text-large text-blue mb-4">Let's talk</p>
-            <v-row>
-              <v-col cols="12" md="12" lg="12">
-                <div class="d-flex flex-column justify-center">
-                  <v-icon color="#8D8D8D" size="120">mdi-email-outline</v-icon>
-                  <p class="mx-auto">nurhimanangga@gmail.com</p>
-                </div>
-              </v-col>
-              <v-col cols="12" md="4" lg="4">
-                <div class="d-flex flex-column justify-center">
-                  <a href="https://github.com/Nurhiman20" target="_blank" class="d-flex flex-column mx-auto">
-                    <v-icon color="#8D8D8D" size="120">mdi-github</v-icon>
-                    <p class="mx-auto">Github Profile</p>
-                  </a>
-                </div>
-              </v-col>
-              <v-col cols="12" md="4" lg="4">
-                <div class="d-flex flex-column justify-center">
-                  <a href="https://www.linkedin.com/in/nurhiman-a/" target="_blank" class="d-flex flex-column mx-auto">
-                    <v-icon color="#8D8D8D" size="120">mdi-linkedin</v-icon>
-                    <p class="mx-auto">LinkedIn</p>
-                  </a>
-                </div>
-              </v-col>
-              <v-col cols="12" md="4" lg="4">
-                <div class="d-flex flex-column justify-center">
-                  <a href="https://gitlab.com/nurhiman_a" target="_blank" class="d-flex flex-column mx-auto">
-                    <v-icon color="#8D8D8D" size="120">mdi-gitlab</v-icon>
-                    <p class="mx-auto">Gitlab Profile</p>
-                  </a>
-                </div>
-              </v-col>
-            </v-row>
-          </section>
-        </v-container>
-      </v-main>
+                    <section id="contact" class="d-flex flex-column h-100 py-12">
+                        <p class="text-large text-blue mb-4">Let's talk</p>
+                        <v-row>
+                            <v-col cols="12" md="12" lg="12">
+                                <div class="d-flex flex-column justify-center">
+                                    <v-icon color="#8D8D8D" size="120">mdi-email-outline</v-icon>
+                                    <p class="mx-auto">nurhimanangga@gmail.com</p>
+                                </div>
+                            </v-col>
+                            <v-col cols="12" md="4" lg="4">
+                                <div class="d-flex flex-column justify-center">
+                                    <a href="https://github.com/Nurhiman20" target="_blank" class="d-flex flex-column mx-auto">
+                                        <v-icon color="#8D8D8D" size="120">mdi-github</v-icon>
+                                        <p class="mx-auto">Github Profile</p>
+                                    </a>
+                                </div>
+                            </v-col>
+                            <v-col cols="12" md="4" lg="4">
+                                <div class="d-flex flex-column justify-center">
+                                    <a href="https://www.linkedin.com/in/nurhiman-a/" target="_blank" class="d-flex flex-column mx-auto">
+                                        <v-icon color="#8D8D8D" size="120">mdi-linkedin</v-icon>
+                                        <p class="mx-auto">LinkedIn</p>
+                                    </a>
+                                </div>
+                            </v-col>
+                            <v-col cols="12" md="4" lg="4">
+                                <div class="d-flex flex-column justify-center">
+                                    <a href="https://gitlab.com/nurhiman_a" target="_blank" class="d-flex flex-column mx-auto">
+                                        <v-icon color="#8D8D8D" size="120">mdi-gitlab</v-icon>
+                                        <p class="mx-auto">Gitlab Profile</p>
+                                    </a>
+                                </div>
+                            </v-col>
+                        </v-row>
+                    </section>
+                </v-container>
+            </v-main>
 
-      <v-overlay :value="overlay" opacity="0.8">
-        <v-progress-circular indeterminate size="64" color="#578CE0"></v-progress-circular>
-      </v-overlay>
-    </v-app>
-  </div>
+            <v-overlay :value="overlay" opacity="0.8">
+                <v-progress-circular indeterminate size="64" color="#578CE0"></v-progress-circular>
+            </v-overlay>
+        </v-app>
+    </div>
 
-  <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/vuetify@2.3.3/dist/vuetify.js"></script>
-  <script src="./assets/js/index.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vuetify@2.3.3/dist/vuetify.js"></script>
+    <script src="./assets/js/index.js"></script>
 </body>
+
 </html>
